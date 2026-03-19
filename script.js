@@ -334,7 +334,8 @@ async function init() {
 
 async function generate() {
     if (!quicHmacKey) await init();
-    const sni = document.getElementById('sni').value;
+    const sniInput = document.getElementById('sni');
+    const sni = sniInput.value || sniInput.placeholder;
     const dcid = new Uint8Array(1);
     window.crypto.getRandomValues(dcid);
     const scid = new Uint8Array(0);
