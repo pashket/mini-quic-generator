@@ -89,7 +89,6 @@ function quicToHex(buffer) {
  * @param {(ArrayBuffer | Uint8Array)[]} buffers 
  * @param {number} allocateBefore
  * @param {number} allocateAfter
- * @param {number} allocateBetween
  */
 function quicConcatBuffers(buffers, allocateBefore = 0, allocateAfter = 0) {
     const buffersU8a = buffers.map((buffer) => quicU8a(buffer));
