@@ -333,9 +333,12 @@ function zebra(buffer, parts, includeFirst = true) {
     return result;
 }
 
-async function generate() {
+let lastSni = null;
+async function generate(force = false) {
     const sniInput = document.getElementById('sni');
     const sni = sniInput.value || sniInput.placeholder;
+    if (!force && sni === lastSni) return;
+    lastSni = sni;
     const dcid = new Uint8Array(1);
     window.crypto.getRandomValues(dcid);
     const scid = new Uint8Array(0);
@@ -347,4 +350,13 @@ async function generate() {
     const i1 = zebra(packet, [31, 22, packet.byteLength - 69, 16]);
     document.getElementById('outputAmnezia').value = i1;
     document.getElementById('outputRaw').value = quicToHex(packet);
+    document.getElementById('outputSni').innerText = sni;
+}
+
+let inputTimeout = null;
+function updatesni() {
+    clearTimeout(inputTimeout);
+    inputTimeout = setTimeout(() => {
+        generate();
+    }, 16);
 }

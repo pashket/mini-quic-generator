@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini QUIC Generator</title>
-    <script src="script.js?2"></script>
+    <script src="script.js?3"></script>
 </head>
 
-<body>
+<body onload="generate()">
     <h2>Mini QUIC Generator</h2>
-    <form onsubmit="event.preventDefault(); generate();">
+    <form onsubmit="event.preventDefault(); generate(true);" oninput="updatesni()">
         <input type="text" id="sni" value="" placeholder="w3.org" size="32" autofocus />
         <input type="submit" value="Generate" />
     </form>
@@ -18,6 +18,7 @@
     <textarea id="outputAmnezia" style="width: 95%" rows="6" disabled></textarea>
     <p>Uncut hex:</p>
     <textarea id="outputRaw" style="width: 95%" rows="6" disabled></textarea>
+    <p>Generated with SNI: <b id="outputSni">(please wait)</b></p>
 </body>
 
 </html>
