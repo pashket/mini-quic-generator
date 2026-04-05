@@ -1,1 +1,1 @@
-Online version on [GitHub Pages](https://sageptr.github.io/mini_quic_generator/)
+Online version on [GitHub Pages](https://pashket.github.io/mini_quic_generator/)
