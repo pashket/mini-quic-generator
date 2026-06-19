@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini QUIC Generator</title>
     <script src="script.js?6"></script>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                color-scheme: dark;
+                background-color: #111;
+                color: #ccc;
+            }
+        }
+    </style>
 </head>
 
 <body onload="generate()">
@@ -19,15 +28,15 @@
             <option value="3">++ Cut Screwed</option>
             <option value="4" selected>+++ Cut Zeroes</option>
         </select>
-        <input type="submit" title="Generate" value="🎲" />
+        <input type="submit" title="Generate" value="рџЋІ" />
     </form>
     <p>
-        <button onclick="copy(event)" data-for="outputAmnezia">↓ Copy</button>
+        <button onclick="copy(event)" data-for="outputAmnezia">в†“ Copy</button>
         AmneziaWG 1.5+ (I1 = ):
     </p>
     <textarea id="outputAmnezia" style="width: 95%" rows="6" disabled></textarea>
     <p>
-        <button onclick="copy(event)" data-for="outputRaw">↓ Copy</button>
+        <button onclick="copy(event)" data-for="outputRaw">в†“ Copy</button>
         Uncut hex:
     </p>
     <textarea id="outputRaw" style="width: 95%" rows="6" disabled></textarea>
