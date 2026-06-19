@@ -20,7 +20,7 @@
 <body onload="generate()">
     <h2>Mini QUIC Generator</h2>
     <form onsubmit="event.preventDefault(); generate(true);" oninput="updatesni()">
-        <input type="text" id="sni" title="SNI domain" value="" placeholder="e.mail.ru" size="16" maxlength="255" autofocus autocapitalize="off" />
+        <input type="text" id="sni" title="SNI domain" value="" placeholder="w3.org" size="16" maxlength="255" autofocus autocapitalize="off" />
         <select id="level" title="Optimization level" onchange="generate(true)">
             <option value="0">Unoptimized (old)</option>
             <option value="1">Safe Reorder</option>
@@ -28,15 +28,15 @@
             <option value="3">++ Cut Screwed</option>
             <option value="4" selected>+++ Cut Zeroes</option>
         </select>
-        <input type="submit" title="Generate" value="рџЋІ" />
+        <input type="submit" title="Generate" value="🎲" />
     </form>
     <p>
-        <button onclick="copy(event)" data-for="outputAmnezia">в†“ Copy</button>
+        <button onclick="copy(event)" data-for="outputAmnezia">↓ Copy</button>
         AmneziaWG 1.5+ (I1 = ):
     </p>
     <textarea id="outputAmnezia" style="width: 95%" rows="6" disabled></textarea>
     <p>
-        <button onclick="copy(event)" data-for="outputRaw">в†“ Copy</button>
+        <button onclick="copy(event)" data-for="outputRaw">↓ Copy</button>
         Uncut hex:
     </p>
     <textarea id="outputRaw" style="width: 95%" rows="6" disabled></textarea>
